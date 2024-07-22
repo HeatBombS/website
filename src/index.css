@@ -1,0 +1,108 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Main */
+
+body {
+    overflow-x: hidden;
+    color: #fff;
+    background-color: #2f2f2f;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth
+}
+#orange {
+    color: #E76F1F;
+}
+/* Scroll */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 22px;
+    background: #00000000;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 22px;
+    background: #8888884f;
+}
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 22px;
+    background: #a8a8a873;
+}
+    
+/* Links */
+a, a:visited, a:active {
+    color: #fff;
+}
+a:hover {
+    color: #E76F1F;
+}
+
+/* Website */
+.main {
+    margin-top: 10%;
+    opacity: 0;
+    transform: translateX(-250px);
+    animation: fadeInUp 2s forwards;
+}
+h1 {
+    font-size: xxx-large;
+}
+a{
+    padding: 0 7px;
+    font-size: x-large;
+}
+.subsidiaries {
+    margin-top: 20%;
+    margin-bottom: 5%;
+    opacity: 0;
+    animation: show 3s forwards;
+}
+.sub {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-template-areas:
+      "hewol lunal"
+      "chomu bwm";
+}
+@media (max-width:598px) {
+    .subsidiaries {
+        margin-top: 20vh;
+        margin-bottom: 5%;
+    }
+    .sub {
+        display:block;
+        grid-template-columns: none;
+    }
+    .sub div{
+        margin-bottom: 10vh;
+    }
+}
+#hewol {
+    grid-area: hewol;
+}
+#lunal {
+    grid-area: lunal;
+}
+#chomu {
+    grid-area: chomu;
+}
+#bwm {
+    grid-area: bwm;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes show {
+    to {
+        opacity: 1;
+    }
+}
